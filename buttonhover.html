@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *,*:before,*:after{
+            box-sizing:border-box;
+        }
+        body{
+            background:linear-gradient(120deg, #ff0000 0%,#903838 50%, #b36060 100%);
+            height:100vh;
+            display:grid;
+            justify-content:center;
+            align-content:center;
+        }
+        button{
+            font-weight:bold;
+            font-size:3em;
+            border:none;
+            background-color:#2f257c;
+            color:white;
+            padding:1em;
+            border-radius:0.1rem;
+            position:relative;
+            overflow:hidden;
+            transition: background-color 200ms ease-in-out;
+        }
+        button::before, button::after{
+            content:"";
+            width:0%;
+            height:0.15em;
+            background-color:white;
+            position:absolute;
+            transition: width 200ms ease-in-out;
+        }
+
+            button::before {
+                left: 0;
+                top: 0;
+            }
+            button::after {
+                right: 0;
+                bottom: 0;
+            }
+            button:hover::before,
+            button:hover::after{
+                width:100%;
+           
+            }
+            button:hover {
+                background-color: #3b3cac;
+            }
+    </style>
+</head>
+<body>
+    <button>Subscribe</button>
+
+</body>
+</html>
