@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body{
+            height:100vh;
+            display:grid;
+            justify-content:center;
+            align-items:center;
+        }
+        h1{
+            font-size:72px;
+            position:relative;
+            cursor:pointer;
+            text-decoration:underline;
+            text-decoration-style:dotted;
+            text-decoration-color:#4cff00;
+
+        }
+        h1::before{
+            content: attr(data-tooltip);
+            position:absolute;
+            font-size:40px;
+            background:gray;
+            padding:1.5rem;
+            border-radius:5px;
+            box-shadow:0px 0px 10px gray;
+            left:25%;
+            top:-100%;
+            clip-path:circle(0rem at center);
+            overflow:hidden;
+            transition:all 300ms ease-in; 
+        }
+        h1:hover::before{
+            clip-path:circle(20rem at center);
+            top:-130%;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-tooltip="Hello">Merhaba</h1>
+</body>
+</html>
