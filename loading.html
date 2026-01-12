@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{
+            height:40px;
+            width:40px;
+            border-radius:50%;
+            display:inline-block;
+            margin:0.5rem;
+            animation: scaling 2.5s ease-in-out infinite;
+        }
+        @keyframes scaling{
+            0%,100%{
+                transform:scale(0.2);
+                background-color:#4cff00;
+            }
+            40%{
+                transform:scale(1);
+                background-color:#00ff90;
+            }
+            50%{
+                transform:scale(1);
+                background-color:#ff6a00;
+            }
+        }
+        div:nth-child(0){
+            animation-delay:0s;
+        }
+        div:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        div:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        div:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        div:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        div:nth-child(5) {
+            animation-delay: 1s;
+        }
+        body{
+            margin-left:30%;
+            margin-top:30%;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
