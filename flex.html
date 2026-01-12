@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .container{
+            min-height: 100vh;
+            background-color:#000000;
+            display:flex;
+            flex-direction:column;
+            gap:1em;
+            margin: 2em 5em;
+        }
+        header{
+            flex:1;
+            border:2px solid red;
+            border-radius:2em;
+            background-color:#b6ff00;
+        }
+        section{
+            flex:4;
+            border-radius:2em;
+            display:flex;
+            gap:1em;
+        }
+        .col-left{
+            flex:2;
+            border:2px solid red;
+            border-radius:2em;
+            background-color:#ffd800;
+        }
+        .col-right{
+            flex:1;
+            border:2px solid red;
+            border-radius:2em;
+            background-color:#4cff00;
+        }
+
+        @media only screen and (max-width: 968px){
+            section{
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+
+        </header>
+        <section>
+            <div class="col-left"></div>
+            <div class="col-right"></div>
+        </section>
+
+    </div>
+
+</body>
+</html>
