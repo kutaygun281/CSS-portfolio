@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body{
+            background-color:black;
+            display:grid;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+        label{
+            width:12em;
+            height:1.5em;
+            background-color:white;
+            position:absolute;
+            cursor:pointer;
+
+            &::before,
+            &::after{
+                        content:'';
+                        width:12em;
+                        height:1.5em;
+                        background-color:white;
+                        position:absolute;
+                        display:block;
+                        transition: all 0.6s cubic-bezier(1,0,0,1);
+                    }
+        &::before {
+            top: -250%;
+            left: 0%;
+            transform-origin: left top;
+            transform: rotateZ(0deg);
+        }
+        &::after {
+            bottom: -250%;
+            left: 0%;
+            transform-origin: left bottom;
+            transform: rotateZ(0deg);
+        }
+        }
+        #toggle:checked ~ label::before{
+            background-color:red;
+            transform:rotateZ(41deg);
+            
+        }
+        #toggle:checked ~ label::after {
+            background-color:red;
+            transform:rotateZ(-41deg);
+        }
+        #toggle:checked ~ label {
+            background-color: black;
+        }
+        #toggle ~ label{
+            transition: all 0.5s cubic-bezier(1,0,0,1);
+        }
+        input{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+    </div>
+
+</body>
+</html>
