@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *,
+        *::after,
+        *::before{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+ 
+        .nav{
+            position:fixed;
+            width:100vw;
+            box-shadow:0 0 10px gray;
+
+            .nav__list{
+                          display:flex;
+                          justify-content:flex-end;
+                          align-items:center;
+                          gap:2rem;
+                          margin:0 2rem;
+
+                          .nav__listitem{
+                                            list-style:none;
+                                            font-weight:bold;
+                                            position:relative;
+                                            padding:1.5rem 1rem;
+                                            cursor:pointer;
+
+                                            &::after{
+                                                        content:"";
+                                                        width:0;
+                                                        height:0.3rem;
+                                                        border-radius:0.2rem;
+                                                        position:absolute;
+                                                        left:1rem;
+                                                        bottom:0.8rem;
+                                                        background-color:#b77878;
+                                                        transition:width 200ms ease-in;
+                                                    }
+                                            &:hover::after, &:focus::after{
+                                                width:80%;
+                                            }
+
+                                            &:hover ul, &:focus ul{
+                                                                      opacity:1;
+                                                                      visibility:visible;
+                                                                  }
+
+                                            .nav__listitemdrop{
+                                                                  position:absolute;
+                                                                  top:4rem;
+                                                                  left:-1rem;
+                                                                  box-shadow:0 0 10px gray;
+                                                                  background-color:white;
+                                                                  border-radius:0.2rem;
+                                                                  width:12rem;
+                                                                  padding:1rem;
+                                                                  display:flex;
+                                                                  flex-direction:column;
+                                                                  gap:0.5rem;
+                                                                  opacity:0;
+                                                                  visibility:hidden;
+                                                                  transition:opacity 200ms ease-in-out;
+
+                                                                  li{
+                                                                        list-style:none;
+                                                                        padding:0.5rem 1rem;
+                                                                        border-radius:0.2rem;
+                                                                        transition:background-color 200ms  ease-in-out;
+
+                                                                        &:hover, &:focus{
+                                                                                           background-color:#b77878;
+                                                                                       }
+                                                                    }
+                                                              }
+                                        }
+                      }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__listitem">About
+                <ul class="nav__listitemdrop">
+                    <li>Our Team</li>
+                    <li>Our Process</li>
+                    <li>History</li>
+                </ul>
+            </li>
+            <li class="nav__listitem">Work
+                <ul class="nav__listitemdrop">
+                    <li>Portfolio</li>
+                    <li>Showcase</li>
+                </ul>    
+            </li>
+            <li class="nav__listitem">Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
