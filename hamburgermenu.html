@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *,
+        *::before,
+        *::after{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-weight:700;
+            color:gray;
+            height:100vh;
+        }
+        .nav{
+            border-bottom:1px solid gray;
+
+            .nav__toggle{
+                         position:absolute;
+                         cursor:pointer;
+                         margin:0rem 1rem;
+                         right:0;
+                     }
+            img{
+                width:1.5rem;
+            }
+            .close{
+                display:none;
+            }
+            .menu{
+                margin-top:0.2rem;
+            }
+            .nav__checkbox{
+                display:none;
+            }
+            .nav__menu{
+                display:flex;
+                flex-direction:column;
+                gap:2rem;
+                align-items:center;
+                margin:1rem;
+
+                li{
+                      list-style:none;
+                      display:none;
+
+                      &:first-child{
+                                        margin-right:auto;
+                                        display:block;
+                                    }
+                  }
+                a{
+                    text-decoration:none;
+                    color:gray;
+                    font-size:1.2rem;
+                }
+                img{
+                    width:1.5rem;
+
+                }
+        }
+
+        }
+
+        #nav__checkbox:checked~ul.nav__menu li{
+            display:block;
+        }
+        #nav__checkbox:checked~label.nav__toggle .close{
+            display:block;
+        }
+        #nav__checkbox:checked ~ label.nav__toggle .menu{
+            display:none;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <input type="checkbox" id="nav__checkbox" class="nav__checkbox" />
+        <label for="nav__checkbox" class="nav__toggle">
+            <img class="menu" src="menu.svg" />
+            <img class="close" src="close.svg" />
+        </label>
+        <ul class="nav__menu">
+            <li><a href="#">
+                <img src="bolt.svg" /></a></li>
+            <li><a href="#"></a>About</li>
+            <li><a href="#"></a>Work</li>
+            <li><a href="#"></a>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
