@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 25px;
+            justify-items: center;
+            align-content: space-evenly;
+            
+        }
+        img{
+            height:200px;
+            width:350px;
+            filter:blur(5px);
+        }
+        .resim{
+            height:200px;
+            width:350px;
+        }
+        .resim:hover{
+        img{
+            cursor:pointer;
+            filter:blur(0px);
+            transition:all 0.5s ease-out;
+        }
+           h1{
+               opacity:1;
+               transform:translateY(5px);
+               transition:all 0.5s ease-out;
+           }
+        }
+        h1{
+            position:relative;
+            top:-150px;
+            right:-125px;
+            color:white;
+            opacity:0;
+            text-shadow:2px 2px grey;
+           
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="resim">
+            <img src="forest.jpg" />
+            <h1>Forest</h1>
+        </div>
+        <div class="resim">
+            <img src="road.jpg" />
+            <h1>Road</h1>
+        </div>
+        <div class="resim">
+            <img src="snow.jpg" />
+            <h1>Snow</h1>
+        </div>
+        <div class="resim">
+            <img src="ocean.jpg" />
+            <h1>Ocean</h1>
+        </div>
+        <div class="resim">
+            <img src="river.jpg" />
+            <h1>River</h1>
+        </div>
+        <div class="resim">
+            <img src="mountain.jpg" />
+            <h1>Mountain</h1>
+        </div>
+    </div>
+
+</body>
+</html>
