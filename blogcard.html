@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body{
+            margin:2rem;
+            color:#808080;
+        }
+        .wrapper{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+        .card{
+            overflow:hidden;
+            background:white;
+            box-shadow:0px 2px 20px #808080;
+            border-radius:0.5rem;
+            position:relative;
+            width:350px;
+            margin:1rem;
+            transition:250ms all ease-in-out;
+            cursor:pointer;
+        }
+        .card:hover{
+            transform:scale(1.05);
+            box-shadow:0px 2px 40px #808080;
+        }
+        .banner-img{
+            position:absolute;
+            object-fit:cover;
+            height:14rem;
+            width:100%;
+        }
+        .category-tag{
+            font-size:0.8rem;
+            font-weight:bold;
+            color:white;
+            background:red;
+            padding:0.5rem 1.3rem 0.5rem 1rem;
+            text-transform:uppercase;
+            position:absolute;
+            z-index:1;
+            top:1rem;
+            border-radius:0 2rem 2rem 0;
+        }
+        .popular{
+            background:#ff0000;
+        }
+        .trend{
+            background:#0094ff;
+        }
+        .newtopic{
+            background:#b6ff00;
+        }
+        .card-body{
+            margin:15rem 1rem 1rem 1rem;
+        }
+        .blog-hashtag{
+            font-size:0.9rem;
+            font-weight:500;
+            color:#0094ff;
+        }
+        .blog-title{
+            line-height:1.5rem;
+            margin:1rem 0 0.5rem;
+        }
+        .blog-description{
+            color:#808080;
+            font-size:0.9rem;
+        }
+        .card-profile{
+            display:flex;
+            margin-top:2rem;
+            align-items:center;
+        }
+        .profile-img{
+            height:60px;
+            width:60px;
+            object-fit:cover;
+            border-radius:50%;
+        }
+        .card-profile-info{
+            margin-left:1rem;
+        }
+        .profile-name{
+            font-size:1rem;
+        }
+        .profile-followers{
+            font-size:0.9rem;
+            color:#808080;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="card-banner">
+                <p class="category-tag popular">Popular</p>
+                <img class="banner-img" src="forest.jpg" />
+            </div>
+            <div class="card-body">
+                <p class="blog-hashtag">#Forest #Nature #Trees</p>
+                <h2 class="blog-title">Do you want to camp in a forest?</h2>
+                <p class="blog-description">Advise about how to camp in forest...</p>
+
+                <div class="card-profile">
+                    <img class="profile-img" src="angry.png" />
+                    <div class="card-profile-info">
+                        <h3 class="profile-name">John Forest</h3>
+                        <p class="profile-followers">1.2k followers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-banner">
+                <p class="category-tag trend">Trend</p>
+                <img class="banner-img" src="mountain.jpg" />
+            </div>
+            <div class="card-body">
+                <p class="blog-hashtag">#Mountain #Nature #Climbing</p>
+                <h2 class="blog-title">Do you want to climb to a mountain?</h2>
+                <p class="blog-description">Advise about how to climb to a mountain...</p>
+
+                <div class="card-profile">
+                    <img class="profile-img" src="happy.png" />
+                    <div class="card-profile-info">
+                        <h3 class="profile-name">John Mountain</h3>
+                        <p class="profile-followers">3.2k followers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-banner">
+                <p class="category-tag newtopic">New Topic</p>
+                <img class="banner-img" src="ocean.jpg" />
+            </div>
+            <div class="card-body">
+                <p class="blog-hashtag">#Ocean #Nature #Water Sports</p>
+                <h2 class="blog-title">Do you want to make water sports in an ocean?</h2>
+                <p class="blog-description">Advise about how to choose perfect water sport for yourself...</p>
+
+                <div class="card-profile">
+                    <img class="profile-img" src="scary.png" />
+                    <div class="card-profile-info">
+                        <h3 class="profile-name">John Ocean</h3>
+                        <p class="profile-followers">2.6k followers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
